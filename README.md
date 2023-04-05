@@ -12,5 +12,10 @@ To Be Updated
 
 ## Contributors/Cited Sources
 
-* [Michael Dulin](https://www.github.com/MichaelDulin)
+* [Michael Dulin](https://www.github.com/MichaelDulin) :
+
+    - Assisted with building server functionality
+
 * Matt Miguel
+
+    - Assisted with test suite build for server
