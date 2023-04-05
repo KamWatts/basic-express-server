@@ -12,4 +12,5 @@ To Be Updated
 
 ## Contributors/Cited Sources
 
-[Michael Dulin]('https://github.com/MichaelDulin')
+* [Michael Dulin](https://www.github.com/MichaelDulin)
+* Matt Miguel
