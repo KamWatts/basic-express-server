@@ -1,6 +1,10 @@
 'use strict'
 
-app.use((err, request, response, next) => {
-  console.log(err);
+function handle404(request, response, next)  {
+
   response.status(404).send('Page not found')
-})
+  next();
+  
+}
+
+module.exports = handle404

@@ -3,29 +3,28 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const logger = require('./middleware/logger');
+const validator = require('./middleware/validator');
+const handle404 = require('./error-handlers/404');
+const handle500 = require('./error-handlers/500');
 
 app.use(cors());
 
-function logger(request, response, next) {
-  console.log('Express app hit!');
-  next();
-}
+const data = {name: ""};
 
+// app level function that runs no matter what route is being used in the request
 app.use(logger);
+app.use('*', handle404);
+app.use(handle500);
 
-app.get('/person', (request, response, next) => {
-  const name = { name: request.query.name }
-  response.send('You\'ve hit the person route')
-  response.json(name);
-
+app.get('/person', validator, (request, response, next) => {
+  data.name = { name: request.query.data.name }
+  response.status(200).json(data);
 });
-
-app.post('/person', placeholder, (request, response, next) => {
-  DataTransfer.push(request.query.message);
-  response.json(data);
-})
 
 module.exports = {
   app,
-  start: (PORT) => app.listen(PORT)
+  start: (PORT) => app.listen(PORT, () => {
+    console.log(`Listening on port: ${PORT}`)
+  })
 };
