@@ -2,7 +2,7 @@
 
 require('dotenv').config();
 const app = require('./src/server.js');
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 app.start(PORT);
 
