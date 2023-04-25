@@ -4,7 +4,9 @@ Building an express server with error handling
 
 ## Deployed Server
 
-[Render.com Link]('https://basic-express-server-mofn.onrender.com')
+[AWS Elastic Beanstalk](http://basicexpressserver2-env.eba-pmapvedd.us-west-2.elasticbeanstalk.com/)
+
+[Render.com Link](https://basic-express-server-mofn.onrender.com)
 
 ## Server UML
 
@@ -14,8 +16,8 @@ To Be Updated
 
 * [Michael Dulin](https://www.github.com/MichaelDulin) :
 
-    - Assisted with building server functionality
+  * Assisted with building server functionality
 
 * Matt Miguel
 
-    - Assisted with test suite build for server
+  * Assisted with test suite build for server

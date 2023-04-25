@@ -21,12 +21,12 @@ describe('Testing server', () => {
   });
 
   test('This should come back with 200 with name in the query', async () => {
-    const response = await request.get('/person?name=w');
+    const response = await request.get('/person?name=whatever');
     expect(response.status).toEqual(200);
   });
 
   test('Name was successfully located', async () => {
-    const response = await request.get('/person?name=k');
+    const response = await request.get('/person?name=knownname');
     expect(response.status).toEqual(200);
     expect(response.body).toMatchObject({ name: 'k' });
   });
